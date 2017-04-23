@@ -19,13 +19,21 @@ let wendaShema = new Schema({
   title: String,
   context: String,
   issuingTime: {type: Date, default: Date.now},
-  authon: String,
-  clickNumber: { type: Number, default: 0 },
-  returnNumber: { type: Number, default: 0 },
-  zanNumber: { type: Number, default: 0 }
+  author: String,
+  viewNumber: { type: Number, default: 0 },
+  zanNumber: { type: Number, default: 0 },
+  resolveNumber: { type: Number, default: 0 }
 });
 
+// let Wenda = mongoose.model('wenda', wendaShema);
+//
+// let wenda = new Wenda();
+// wenda.title = "为什么会有这么多的人使用问答系统呢?";
+// wenda.context = "因为这里, 会让我们学习到更多的东西";
+// wenda.author = "Richard";
+// wenda.save();
+
+
 let User = mongoose.model('user', userShema);
-
-
 module.exports.user = User;
+module.exports.wenda = mongoose.model('wenda', wendaShema);

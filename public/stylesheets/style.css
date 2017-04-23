@@ -1,8 +1,56 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/*
+亮蓝色: #00aaff
+亮紫色: #A47EE6      浅色: #EDE5FA
+亮黄色: #FFB319       浅色: #FFF4D1
+亮绿色: #7DD843      浅色: #EAF9DC
+亮青色: #14C4ED       浅色: #D0F5FC
+*/
+
 
 a {
   color: #00B7FF;
+}
+.topline{
+  border: 2px solid #00aaff;
+}
+.menu {
+  margin-top: 5px;
+}
+
+.centerline {
+  border: 1px solid black;
+}
+
+.myline {
+  border: 0.5px solid #A47EE6;
+}
+
+.number {
+  border-right: 1px solid green;
+  display: inline;
+  vertical-align: top;
+  text-align: center;
+}
+.viewnumber{
+  color: white;
+  background-color: #00aaff;
+}
+.zanumber {
+  color: white;
+  background-color: #FF0066;
+}
+
+.solenumber {
+  color: white;
+  background-color: #7DD843;
+}
+
+
+.badge {
+  margin-top: -15px;
+}
+
+
+#footer {
+  background-color: #eee;
 }

@@ -1,14 +1,82 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    
-    <h2>name: <%= user.name %></h2>
-    <h2>password: <%= user.passwd %></h2>
-    <h2>email: <%= user.email %></h2>
-  </body>
+<html lang="en">
+  <% include head %>
+
+<style media="screen">
+
+</style>
+<body>
+  <div class="container-fluid navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="topline"></div>
+      <div class="container menu">
+        <div class="row nav-tabs nav">
+          <div class="col-md-1"><i class="fa fa-gg-circle fa-2x" aria-hidden="true"></i></div>
+
+          <div class="col-md-4"><ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="#">问答</a></li>
+            <li role="presentation"><a href="#">类别</a></li>
+            <li role="presentation"><a href="#">分别</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>欢迎您使用中国问答网!</h1>
+    <p>如果您是第一次来, 中国问答网, 注册一个用户.</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">注册</a></p>
+  </div>
+</div>
+<div class="container">
+
+    <div class="row">
+      <% data.forEach(function(info){ %>
+      <div class="col-md-9">
+        <div class="myline"></div>
+        <div class="col-md-1 number">
+            <p>查看</p>
+            <span class="badge viewnumber"><%= info.viewNumber %></span>
+        </div>
+        <div class="col-md-1 number">
+            <p>点赞</p>
+            <span class="badge zanumber"><%= info.zanNumber %></span>
+        </div>
+        <div class="col-md-1 number">
+            <p>解决</p>
+            <span class="badge solenumber"><%= info.resolveNumber %></span>
+        </div>
+        <div class="col-md-8 title"><h4><%= info.title %></h4>
+        </div>
+        <div class="col-md-1 author"><%= info.author %></div>
+        </div>
+      <% })%>
+
+      <div class="col-md-3 mybord"></div>
+  </div>
+  <div class="myline"></div>
+</div>
+
+
+
+<div class="container">
+
+</div>
+<div id="footer" class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">联系方式</div>
+      <div class="col-md-4">公司信息</div>
+      <div class="col-md-4">关于</div>
+    </div>
+  </div>
+
+
+</body>
 </html>
