@@ -6,33 +6,14 @@
 
 </style>
 <body>
-  <div class="container-fluid navbar-fixed-top">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="topline"></div>
-      <div class="container menu">
-        <div class="row nav-tabs nav">
-          <div class="col-md-1"><i class="fa fa-gg-circle fa-2x" aria-hidden="true"></i></div>
-
-          <div class="col-md-4"><ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="#">问答</a></li>
-            <li role="presentation"><a href="#">类别</a></li>
-            <li role="presentation"><a href="#">分别</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-1"></div>
-      </div>
-    </div>
-  </nav>
-</div>
+<% include navbar %>
 
 <div class="container">
   <div class="jumbotron">
     <h1>欢迎您使用中国问答网!</h1>
     <p>如果您是第一次来, 中国问答网, 注册一个用户.</p>
     <p><a class="btn btn-primary btn-lg" href="#" role="button">注册</a></p>
+    <p><a class="btn btn-primary btn-lg" href="/question" role="button">Quest</a></p>
   </div>
 </div>
 <div class="container">
@@ -53,7 +34,7 @@
             <p>解决</p>
             <span class="badge solenumber"><%= info.resolveNumber %></span>
         </div>
-        <div class="col-md-8 title"><h4><%= info.title %></h4>
+        <div class="col-md-8 title"><h4><a href="./wen/<%= info._id %>" target='_parent' >  <%= info.title %> </a></h4>
         </div>
         <div class="col-md-1 author"><%= info.author %></div>
         </div>

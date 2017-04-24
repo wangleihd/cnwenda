@@ -4,9 +4,7 @@ const db = require('../collections')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  db.wenda.find({}, function(err, data){
-    console.log(data);
-    console.log(data.name);
+  db.wenda.find({}, [], {sort: {issuingTime: -1}}, function(err, data){
     res.render('index', { title: 'WenDa', data: data});
   });
 });
