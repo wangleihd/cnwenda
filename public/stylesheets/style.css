@@ -22,11 +22,11 @@ a {
 }
 
 .myline {
-  border: 0.5px solid #A47EE6;
+  border: 0.5px solid #eee;
 }
 
 .number {
-  border-right: 1px solid green;
+  border-right: 1px solid #ddd;
   display: inline;
   vertical-align: top;
   text-align: center;
