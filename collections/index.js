@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-//let url = 'mongodb://cnstu.top:27017/wenda';
-let url = 'mongodb://192.168.1.11:27017/wenda';
+let url = 'mongodb://cnstu.top:27017/wenda';
+//let url = 'mongodb://192.168.1.11:27017/wenda';
 mongoose.connect(url);
 
 let db = mongoose.connection;

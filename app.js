@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var register = require('./routes/users');
 var quest = require('./routes/quest');
 var db = require('./collections');
 
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/register', register);
 app.use('/question', quest);
 app.get('/wen/:_id', function(req, res, next) {
   db.wenda.findOne(req.params, function(err, data){

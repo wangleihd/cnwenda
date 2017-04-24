@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include head %>
+<body>
+
+<% include navbar %>
+
+
+
+<div class="container">
+  <div class="row">
+    <h1><%= title %></h1>
+
+    <form action="/question" method="post">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Title: </span>
+        <input type="text" class="form-control" name="title" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Title: </span>
+        <input type="text" class="form-control" name="context" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">Title: </span>
+        <input type="text" class="form-control" name="author"
+        value = "Richard" aria-describedby="basic-addon1">
+      </div>
+
+
+      <button type="submit" class="btn btn-default">Right</button>
+    </form>
+
+  </div>
+</div>
+
+<% include footer %>
+
+</body>
+</html>
